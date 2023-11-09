@@ -5,14 +5,16 @@ description = "Library "
 authors = ["andgate <the.andgate@gmail.com>"]
 readme = "README.md"
 packages = [
-    { include = "goose", from = "lib" },
-    { include = "goose-agents", from = "lib" },
-    { include = "goose-instruct", from = "lib" },
-    { include = "goose-threads", from = "lib" },
+    { include = "goose", from = "libs" },
+    { include = "goose-agents", from = "libs" },
+    { include = "goose-instruct", from = "libs" },
+    { include = "goose-threads", from = "libs" },
 ]
 
 [tool.poetry.dependencies]
 python = "^3.12"
+pydantic = "2.4.2"
+openai = "1.1.2"
 
 [build-system]
 requires = ["poetry-core"]
