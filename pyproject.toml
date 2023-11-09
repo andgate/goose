@@ -1,13 +1,18 @@
 [tool.poetry]
 name = "goose"
 version = "0.1.0"
-description = ""
+description = "Library "
 authors = ["andgate <the.andgate@gmail.com>"]
 readme = "README.md"
+packages = [
+    { include = "goose", from = "lib" },
+    { include = "goose-agents", from = "lib" },
+    { include = "goose-instruct", from = "lib" },
+    { include = "goose-threads", from = "lib" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-
 
 [build-system]
 requires = ["poetry-core"]
